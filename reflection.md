@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name:  Jiya Sharma
+Sudent Email:  jsharma@syr.edu
 
 ## Instructions
 
@@ -23,3 +23,12 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+Working on Assignment 06 offered me valuable hands-on experience in building and managing a multi-step ETL (Extract, Transform, Load) pipeline that interacts with external APIs. This assignment emphasized how real-world data applications are often modular, and that breaking tasks into manageable, sequential steps makes development and debugging significantly easier.
+
+The most rewarding part of this assignment was learning how to structure an ETL pipeline using both Google and Azure APIs. I appreciated the logic of transforming raw review data into structured insights by combining API calls, JSON parsing, and Pandas data manipulation. Writing reusable and testable functions for each stage—reviews_step, sentiment_step, and entity_extraction_step—helped me understand the importance of clean interfaces between stages in a data pipeline.
+
+One of the main challenges I faced was managing API quotas and ensuring I didn’t accidentally overuse the resources while testing. I learned the value of caching intermediate results, which allowed me to continue developing and testing downstream processes without repeating expensive API calls. This principle of caching and reusability is something I now recognize as essential in any large-scale data pipeline.
+
+Another challenge was working with nested JSON responses. While json_normalize proved helpful, I still had to carefully inspect the API response formats and flatten them correctly while preserving necessary context like place_id and author_name. This taught me how critical it is to fully understand the structure of data coming from external services before trying to manipulate it.
+
+Overall, this assignment not only strengthened my Python skills but also deepened my understanding of API integration, data wrangling, and building scalable data pipelines. It has prepared me for more advanced analytics tasks where automation, performance, and modularity are key.

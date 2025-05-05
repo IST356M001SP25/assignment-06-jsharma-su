@@ -4,10 +4,10 @@ import pandas as pd
 import requests
 import json
 
-from code.solutions.assignment_etl import entity_extraction_step 
+from code.assignment_etl import entity_extraction_step 
 if __name__ == "__main__":
     import sys
-    sys.path.append('code')
+    sys.path.append('code.assignment_etl')
     from apicalls import get_google_place_details, get_azure_sentiment, get_azure_named_entity_recognition
 else:
     from code.apicalls import get_google_place_details, get_azure_sentiment, get_azure_named_entity_recognition
@@ -90,9 +90,9 @@ def sentiment_step(reviews: str|pd.DataFrame) -> pd.DataFrame:
 
       entities_df.rename(columns={'category': 'entity_category'}, inplace=True)
 
-      entities_df.rename(columns={'subcategory': 'entity_subcategory'} inplace=True)
+      entities_df.rename(columns={'subategory': 'entity_subcategory'}, inplace=True)
 
-      entities_df.rename(columns='confidenceScore' : 'confidenceScores.entity', inplace=True)
+      entities_df.rename(columns={'confidenceScore': 'confidenceScores.entity'}, inplace=True)
 
       print(entities_df.columns)
 
